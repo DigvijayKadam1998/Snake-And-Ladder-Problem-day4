@@ -4,6 +4,7 @@ import java.util.Random;
 public class SnakeAndLadder {
     public static void main(String[] args) {
     	int position = 0;
+    	int DiceRollCount = 0;
 	final int WINNING_POSITION = 100;
 		
 	//using while loop
@@ -13,7 +14,7 @@ public class SnakeAndLadder {
 	    int diceValue = rand.nextInt(6)+1;
 	    System.out.println("Dice Value is ==> " +diceValue);
 	    int option = rand.nextInt(3);
-		
+	    DiceRollCount++;
 	    if(position == WINNING_POSITION) {
 	        System.out.println("<====You Won The Game====>");
 	        break;
@@ -47,6 +48,7 @@ public class SnakeAndLadder {
 	    default:
 	        System.out.println("Not Correct");
 	    }
+	    System.out.println("Dice Roll Count ===>"+DiceRollCount);
 	}
     }
 }
